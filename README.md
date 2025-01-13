@@ -1,4 +1,4 @@
-# Запускаем свой выделенный VPN-сервер WireGuard c web-интерфейсом
+# Запускаем VPN-сервер WireGuard c web-интерфейсом
 
 [О WireGuard можно узнать здесь ](https://goo.su/xKp8kj)
 
