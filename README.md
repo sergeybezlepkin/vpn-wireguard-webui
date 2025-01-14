@@ -199,8 +199,3 @@ cd vpn-wireguard/
 ```sh
 docker compose up -d 
 ```
-
-Проверяем запущенный контейнер
-```sh
-docker ps -a | grep wg-easy
-```
