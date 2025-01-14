@@ -1,0 +1,5 @@
+#! /bin/bash
+sudo apt install -y curl nano
+curl https://get.docker.com | sh
+sudo usermod -aG docker $(echo $USER)
+sudo reboot
