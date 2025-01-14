@@ -83,7 +83,7 @@ volumes:
 ## Генерируем хэш для пароля
 
 ```sh
-cat hash.txt
+cat hash
 ```
 ```sh
 docker run --rm -it ghcr.io/wg-easy/wg-easy wgpw 'YOUR_PASSWORD'
