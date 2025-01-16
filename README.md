@@ -64,7 +64,7 @@ services:
       - PORT=48999
       - WG_DEFAULT_ADDRESS=10.45.0.x
       - WG_DEFAULT_DNS=1.1.1.1, 8.8.8.8
-      - WG_ALLOWED_IPS=10.45.0.0/24
+      - WG_ALLOWED_IPS=0.0.0.0/0, ::/0
       - WG_PERSISTENT_KEEPALIVE=25
       # - WG_PRE_UP=echo "Pre Up" > /etc/wireguard/pre-up.txt
       # - WG_POST_UP=echo "Post Up" > /etc/wireguard/post-up.txt
@@ -134,7 +134,7 @@ services:
       - PORT=48999
       - WG_DEFAULT_ADDRESS=10.45.0.x
       - WG_DEFAULT_DNS=1.1.1.1, 8.8.8.8
-      - WG_ALLOWED_IPS=10.45.0.0/24
+      - WG_ALLOWED_IPS=0.0.0.0/0, ::/0
       - WG_PERSISTENT_KEEPALIVE=25
       # - WG_PRE_UP=echo "Pre Up" > /etc/wireguard/pre-up.txt
       # - WG_POST_UP=echo "Post Up" > /etc/wireguard/post-up.txt
