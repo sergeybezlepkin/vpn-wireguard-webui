@@ -130,7 +130,7 @@ services:
       - PASSWORD_HASH=$$2a$$12$$o1s1n4ruKZ/2RbnVOUoHOutLY6raO4IDZv7/5z/Qh.K0UbA8RyaVG
       - UI_TRAFFIC_STATS=true
       - UI_CHART_TYPE=3
-      - WG_PORT=51820
+      - WG_PORT=49888
       - PORT=48999
       - WG_DEFAULT_ADDRESS=10.45.0.x
       - WG_DEFAULT_DNS=1.1.1.1, 8.8.8.8
@@ -153,9 +153,9 @@ volumes:
 
 ## Правим переменные в файле compose.yml под свои нужды
 
-В переменной окружения `- LANG=ru` можно изменить язык интерфейса на en, ua, ru, tr, no, pl, fr, de, ca, es, ko, vi, nl, is, pt, chs, cht, it, th, hi, ja, si.
-В переменной окружения `- PORT=48999` можно изменить удобный для себя порт, например взять свободные с 48658—48999, или с 49001—49150. 
-В переменной окружения `- WG_DEFAULT_ADDRESS=10.45.0.x` можно изменить вторую октету адреса, на 8 или 6. Получаем: `10.8.0.x` или `10.6.0.x`. После внесения нужных данных, сохраняем файл compose.yml.
+- В переменной окружения `- LANG=ru` можно изменить язык интерфейса на en, ua, ru, tr, no, pl, fr, de, ca, es, ko, vi, nl, is, pt, chs, cht, it, th, hi, ja, si.
+- В переменной окружения `- PORT=48999` можно изменить удобный для себя порт, например взять свободные с 48658—48999, или с 49001—49150. 
+- В переменной окружения `- WG_DEFAULT_ADDRESS=10.45.0.x` можно изменить вторую октету адреса, на 8 или 6. Получаем: `10.8.0.x` или `10.6.0.x`. После внесения нужных данных, сохраняем файл compose.yml.
 
 ## Добавляем правила в брандмауэр iptables и включаем IP Forward
 
@@ -190,7 +190,7 @@ sudo iptables -t nat -I POSTROUTING 1 -s 10.8.0.0/24 -o YOUR_INTERFACE -j MASQUE
 ```sh
 sudo iptables -t nat -I POSTROUTING 1 -s 10.45.0.0/24 -o enp0s3 -j MASQUERADE
 ```
-Даллее, по аналогии нужно подставить свой интерфейс и применить каждую комманду:
+Далее, по аналогии нужно подставить свой интерфейс и применить каждую комманду:
 
 ```sh
 sudo iptables -I INPUT 1 -i wg0 -j ACCEPT
@@ -202,7 +202,7 @@ sudo iptables -I FORWARD 1 -i YOUR_INTERFACE -o wg0 -j ACCEPT
 sudo iptables -I FORWARD 1 -i wg0 -o YOUR_INTERFACE -j ACCEPT
 ```
 ```sh
-sudo iptables -I INPUT 1 -i YOUR_INTERFACE -p udp --dport 51820 -j ACCEPT
+sudo iptables -I INPUT 1 -i YOUR_INTERFACE -p udp --dport 49888 -j ACCEPT
 ```
 
 ## Запускаем сервер
