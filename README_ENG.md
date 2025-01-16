@@ -4,7 +4,7 @@
 
 ## VPS/VDS
 
-You need a VPS/VDS server to run it. The server can be found [here](https://goo.su/IsDeUO), or [here for less than $3/month, or for a week for less than $1](https://vdska.ru/#vds_calc). The operating system is Ubuntu 20 or newer. To run a VPN server in a container, all you need is 1 core, 1 gigabyte of RAM, and 10 gigabytes or more of free space. After purchasing the server, you will be given credentials to log in to the server. How to log in to the terminal on the server can be found [here](https://goo.su/BBH9F).
+You need a VPS/VDS server to run it. The server can be found [here](https://goo.su/IsDeUO), or [here for less than $3/month, or for a week for less than $1](https://vdska.ru/en/#vds_calc). The operating system is Ubuntu 20 or newer. To run a VPN server in a container, all you need is 1 core, 1 gigabyte of RAM, and 10 gigabytes or more of free space. After purchasing the server, you will be given credentials to log in to the server. How to log in to the terminal on the server can be found [here](https://goo.su/QRB6B).
 
 # Ubuntu
 
