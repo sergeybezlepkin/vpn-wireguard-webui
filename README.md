@@ -57,7 +57,7 @@ services:
       - PASSWORD_HASH=
       - UI_TRAFFIC_STATS=true
       - UI_CHART_TYPE=3
-      - WG_PORT=51820
+      - WG_PORT=49888
       - PORT=48999
       - WG_DEFAULT_ADDRESS=10.45.0.x
       - WG_DEFAULT_DNS=1.1.1.1, 8.8.8.8
