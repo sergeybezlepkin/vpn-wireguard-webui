@@ -1,4 +1,4 @@
-[English](vpn-wireguard/README_ENG.md)
+[English](/README_ENG.md)
 
 # Запускаем VPN-сервер WireGuard c web-интерфейсом
 
