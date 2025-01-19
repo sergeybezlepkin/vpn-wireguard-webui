@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  beszel:
+    image: henrygd/beszel:latest
+    container_name: beszel
+    restart: unless-stopped
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - "32999:8090"
+    volumes:
+      - ./beszel_data:/beszel_data
+
+#  beszel-agent:
+#    image: henrygd/beszel-agent:latest
+#    container_name: beszel-agent
+#    restart: unless-stopped
+#    network_mode: host
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock:ro
+#    environment:
+#      PORT: 45876
+#      KEY: ""
