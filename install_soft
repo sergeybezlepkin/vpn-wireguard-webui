@@ -1,5 +1,6 @@
-#! /bin/bash
+#!/bin/bash
+sudo apt update
 sudo apt install -y curl nano nmap iptables-persistent
-curl https://get.docker.com | sh
-sudo usermod -aG docker $(echo $USER)
+curl -fsSL https://get.docker.com | sh
+sudo usermod -aG docker "$(echo $USER)"
 sudo reboot
