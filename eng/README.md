@@ -6,21 +6,19 @@ You need a VPS/VDS server to run it. Server can be found [here](https://goo.su/I
 
 # Table of Contents
 
-- [Ubuntu](#Ubuntu)
-  - [Install git, curl, nano, and Docker](##Install-git,-curl,-nano-and-Docker)
-  - [Edit the compose.yml file to start the VPN server](##Edit-compose.yml-to-start-VPN-server)
-  - [Generate password hash](##Generate-password-hash)
-  - [Learn your routable IP address](#Learn-your-routable-IP-address)
-  - [Final compose.yml file](#Final-compose.yml-file)
-  - [(Optional) Edit variables in compose.yml file](#(Optional)-Edit-variables-in-compose.yml-file)
-  - [Add rules to the iptables firewall and enable IP Forward](#Add-rules-to-firewall-iptables-and-enable-IP-Forward)
-  - [Start the server](#Start-the-server)
-  - [Start the web interface](#Start-the-web-interface)
-- [(Optional)Start monitoring Beszel with Telegram status notification](#(Optional)-Start-Monitoring-Beszel-with-Telegram-status-notification)
-  - [Customize notifications via Telegram](#(Optional)-Customize-notifications-through-Telegram)
-  - [(Optional) Create a bot and get an API token](#(Optional)-Create-a-bot-and-get-API-token)
+  - [Install git, curl, nano, and Docker](#install-git-curl-nano-and-docker)
+  - [Edit the compose.yml file to start the VPN server](#edit-the-composeyml-file-to-start-the-vpn-server)
+  - [Generate password hash](#generate-a-hash-for-the-password)
+  - [Get your routable IP address](#get-your-routable-ip-address)
+  - [Final compose.yml file](#final-file-composeyml)
+  - [(Optional) Edit variables in compose.yml file](#optional-edit-variables-in-the-composeyml-file)
+  - [Add rules to the iptables firewall and enable IP Forward](#add-rules-to-the-iptables-firewall-and-enable-ip-forward)
+  - [Start the server](#start-the-server)
+  - [Launch the web interface](#launch-the-web-interface)
+- [(Optional) Start Beszel monitoring with status notification in Telegram](#optional-start-beszel-monitoring-with-status-notification-in-telegram)
+  - [Setting up notifications via Telegram](#setting-up-notifications-via-telegram)
+  - [(Optional) Create a bot and get an API token](#optional-create-a-bot-and-get-api-token)
 
-# Ubuntu
 
 ## Install git, curl, nano and Docker
 
@@ -129,7 +127,7 @@ Add the resulting address string to the `WG_HOST=` environment variable after th
 
 We get: `- WG_HOST=178.125.85.124`. 
 
-#### Final file compose.yml
+## Final file compose.yml
 
 ```sh
 version: “3.7”
