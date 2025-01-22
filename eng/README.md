@@ -10,8 +10,8 @@ You need a VPS/VDS server to run it. Server can be found [here](https://goo.su/I
   - [Edit the compose.yml file to start the VPN server](#edit-the-composeyml-file-to-start-the-vpn-server)
   - [Generate password hash](#generate-a-hash-for-the-password)
   - [Get your routable IP address](#get-your-routable-ip-address)
-  - [Final compose.yml file](#final-file-composeyml)
   - [(Optional) Edit variables in compose.yml file](#optional-edit-variables-in-the-composeyml-file)
+  - [Final compose.yml file](#final-file-composeyml)
   - [Add rules to the iptables firewall and enable IP Forward](#add-rules-to-the-iptables-firewall-and-enable-ip-forward)
   - [Start the server](#start-the-server)
   - [Launch the web interface](#launch-the-web-interface)
@@ -127,6 +127,13 @@ Add the resulting address string to the `WG_HOST=` environment variable after th
 
 We get: `- WG_HOST=178.125.85.124`. 
 
+## (Optional) Edit variables in the compose.yml file
+
+- In the `LANG=ru` environment variable you can change the interface language. Available options: en, ua, ru, tr, no, pl, fr, de, ca, es, ko, vi, nl, is, pt, chs, cht, it, th, hi, ja, si.
+- In the `PORT=48999` environment variable, you can specify a convenient port. For example, select a free port from the ranges 48658-48999 or 49001-49150.
+- In the `WG_DEFAULT_ADDRESS=10.45.0.x` environment variable, you can change the second octet of the address to 8 or 6. For example, you would get 10.8.0.x or 10.6.0.x.
+- After making the necessary changes, save the compose.yml file.
+
 ## Final file compose.yml
 
 ```sh
@@ -166,14 +173,6 @@ volumes:
 ```
 
 `Save the final file compose.yml by pressing Ctrl + O. Enter the name of the file - compose.yml - and confirm saving `
-
-## (Optional) Edit variables in the compose.yml file
-
-- In the `LANG=ru` environment variable you can change the interface language. Available options: en, ua, ru, tr, no, pl, fr, de, ca, es, ko, vi, nl, is, pt, chs, cht, it, th, hi, ja, si.
-- In the `PORT=48999` environment variable, you can specify a convenient port. For example, select a free port from the ranges 48658-48999 or 49001-49150.
-- In the `WG_DEFAULT_ADDRESS=10.45.0.x` environment variable, you can change the second octet of the address to 8 or 6. For example, you would get 10.8.0.x or 10.6.0.x.
-- After making the necessary changes, save the compose.yml file.
-
 
 ## Add rules to the iptables firewall and enable IP Forward.
 
