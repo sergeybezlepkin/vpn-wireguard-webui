@@ -3,6 +3,7 @@
 # Запускаем VPN-сервер WireGuard c web-интерфейсом
 
 ![LOGO](https://drive.google.com/file/d/1hTG_MxTImmjy8aOxx9Neara7pSCtKLpp)
+![LOGO2](https://drive.google.com/file/d/1-YUbNdG32kn5dPQqT4qIEpIYAUiyEqVO)
 
 [WireGuard можно узнать здесь ](https://goo.su/xKp8kj)
 
@@ -299,6 +300,8 @@ docker ps -a | grep beszel
 
 После входа в систему найдите на панели иконку выбора языка интерфейса и выберите удобный для вас язык. Нажмите кнопку «Добавить систему» в правом верхнем углу, чтобы открыть диалоговое окно создания новой системы.
 
+![UP_BESZEL](https://drive.google.com/file/d/1jiwgfRzBfW0w0qcxj2E5Brt3r8eQL070)
+
 Копируем `Ключ` и закрываем окно. Переходим в каталог `beszel` и редактируем файл `compose.yml`.
 
 ```sh
@@ -381,6 +384,9 @@ docker ps -a | grep beszel
 ```
 
 Будет запущено два контейнера: один — сервер, а другой — агент. Снова переходим в веб-интерфейс сервиса Beszel. Нажимаем кнопку «Добавить систему» в правом верхнем углу, чтобы открыть диалоговое окно добавления агента.
+
+![ADD_BESZEL](https://drive.google.com/file/d/1v98_YMxFGUYoU5OKA1fM8IHmou_CzFDm)
+
 Добавляем следующие данные:
 
 - Имя
@@ -438,6 +444,8 @@ docker run --rm -it containrrr/shoutrrr generate telegram
 
 Добавляем полученный чат ID в строку, итог: `telegram://123456789:ABCdefGhIJKlmNoPQRstuVWXyz@telegram/?channels=-1002321991729&notification=no&preview=false&parseMode=html`
 
-Редактируем остальные параметры по желанию, и итоговую строку добавляем в Настройки - Уведомления - Webhook. 
+Редактируем остальные параметры по желанию, и итоговую строку добавляем в Настройки - Уведомления - Webhook.
+
+![TELEGRAM_BESZEL](https://drive.google.com/file/d/1REA6mwX6TKhx9A25U4XgMp-YlgqtTgeI)
 
 Нажимаем кнопку «Тест URL» и получаем тестовое сообщение для проверки корректности настройки. Для настройки уведомлений от сервера переходим на главную страницу, нажимаем на «Колокольчик» и настраиваем соответствующие тумблеры.
