@@ -1,6 +1,8 @@
 # Start the WireGuard VPN server with web interface
 
-[WireGuard can be found here ](https://goo.su/xKp8kj)
+![LOGO2](../img/2.png)
+
+[WireGuard - can be found here ](https://goo.su/xKp8kj)
 
 You need a VPS/VDS server to run it. Server can be found [here](https://goo.su/IsDeUO), or [here - for less than 3$ per month, or for a week - for less than 1$](https://vdska.ru/#vds_calc). The operating system is Ubuntu 20 or newer. To run a VPN server in a container you only need 1 core, 1 gigabyte of RAM and from 15 gigabytes of free space. After purchasing the server, you will be given credentials to log in to the server. How to log in to the terminal on the server can be found [here](https://goo.su/BBH9F).
 
@@ -29,7 +31,7 @@ sudo apt install -y git
 ```
 Clone the repository
 ```sh
-git clone https://github.com/sergeybezlepkin/vpn-wireguard.git
+git clone https://gitea.com/sergeybezlepkin/vpn-wireguard.git
 ```
 Go to the vpn-wireguard directory.
 ```sh
@@ -221,10 +223,23 @@ sudo iptables -I FORWARD 1 -i YOUR_INTERFACE -o wg0 -j ACCEPT
 sudo iptables -I FORWARD 1 -i wg0 -o YOUR_INTERFACE -j ACCEPT
 ```
 ```sh
+sudo iptables -A FORWARD -i wg0 -o wg0 -j ACCEPT
+```
+```sh
 sudo iptables -I INPUT 1 -i YOUR_INTERFACE -p udp --dport 49888 -j ACCEPT
 ```
 
 > The installed iptables-persistent package allows you to save iptables rules after a server reboot.
+
+```sh
+sudo netfilter-persistent save
+```
+```sh
+sudo systemctl enable netfilter-persistent
+```
+```sh
+sudo systemctl start netfilter-persistent
+```
 
 ## Start the server
 
@@ -242,6 +257,8 @@ docker ps -a | grep wg-easy
 
 ## Launch the web interface
 
+![LOGO2](../img/1.PNG)
+
 Go to the browser and enter the IP address of the host from the `WG_HOST=XXX.XXX.XXX` variable, add a colon and the port number from the `PORT=XXXX` variable. Пример: http://178.125.85.124:48999.
 We get to the main page with a password input field. Enter the password that was created using hash string. After successful login, the interface will open. Click the “+ Create” or “+ Create Client” button, enter the name of the client. The configuration will be ready. 
 
@@ -251,6 +268,8 @@ Each client has:
 - A QR code button for scanning.
 - A button to download the configuration.
 - A button to uninstall the client.
+
+![LOGO2](../img/2.png)
 
 #### [Download client for your devices](https://www.wireguard.com/install/)
 
@@ -289,6 +308,8 @@ docker ps -a | grep beszel
 ```
 
 Go to the web interface of the service. In the browser, re-enter the IP address of the host, add a colon and port 32999. Example: http://178.125.85.124:32999. We get to the main page of logging into the service. Here you will need either registration or a quick login via your GitHub account.
+
+![LOGO3](../img/3.png)
 
 Once logged in, find the interface language selection icon on the panel and choose a language you are comfortable with. Click the `Add System` button in the upper right corner to open the Create New System dialog box.
 
@@ -379,6 +400,8 @@ We add the following information:
 - Name
 - IP address of the host
 
+![LOGO4](../img/4.png)
+
 And click the `Add System` button. The agent is added to the server and starts receiving information about the system.
 
 ### Setting up notifications via Telegram
@@ -431,6 +454,8 @@ And answer the questions.
 
 Add the received chat ID to the string, total: `telegram://123456789:ABCdefGhIJKlmNoPQRstuVWXyz@telegram/?channels=-1002321991729&notification=no&preview=false&parseMode=html`.
 
-Edit the rest of the parameters as desired, and add the final string to Settings - Notifications - Webhook. 
+Edit the rest of the parameters as desired, and add the final string to Settings - Notifications - Webhook.
+
+![LOGO5](../img/5.png)
 
 Click the “Test URL” button and get a test message to check if the settings are correct. To customize notifications from the server, go to the main page, click on “Bell” and customize the corresponding toggle switches.
