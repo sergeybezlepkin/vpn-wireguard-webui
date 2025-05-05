@@ -60,7 +60,6 @@ nano compose.yml
 `File compose.yml`
 
 ```sh
-version: “3.7”
 services:
   wg-easy:
     image: ghcr.io/wg-easy/wg-easy
@@ -139,7 +138,6 @@ We get: `- WG_HOST=178.125.85.124`.
 ## Final file compose.yml
 
 ```sh
-version: “3.7”
 services:
   wg-easy:
     image: ghcr.io/wg-easy/wg-easy
@@ -206,7 +204,7 @@ Now add commands to the terminal:
 ```sh
 sudo iptables -t nat -I POSTROUTING 1 -s 10.45.0.0.0/24 -o YOUR_INTERFACE -j MASQUERADE
 ```
-where, `10.8.0.0.0/24` is your IP address from the environment variable `- WG_DEFAULT_ADDRESS=10.8.0.x` and `eth0` is the name of your interface.
+where, `10.45.0.0.0/24` is your IP address from the environment variable `- WG_DEFAULT_ADDRESS=10.45.0.x` and `eth0` is the name of your interface.
 Example:
 ```sh.
 sudo iptables -t nat -I POSTROUTING 1 -s 10.45.0.0.0/24 -o enp0s3 -j MASQUERADE
@@ -326,7 +324,6 @@ nano compose.yml
 `File compose.yml`
 
 ```sh
-version: “3.7”
 services:
   beszel:
     image: henrygd/beszel:latest
@@ -356,7 +353,6 @@ Add the key in quotes, and remove all `#` signs from the beszel-agent code block
 `The final file is compose.yml`
 
 ```sh
-version: “3.7”
 services:
   beszel:
     image: henrygd/beszel:latest
