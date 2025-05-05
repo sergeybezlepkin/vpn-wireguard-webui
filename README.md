@@ -62,7 +62,6 @@ nano compose.yml
 `Файл compose.yml`
 
 ```sh
-version: "3.7"
 services:
   wg-easy:
     image: ghcr.io/wg-easy/wg-easy
@@ -141,7 +140,6 @@ curl ipinfo.io
 ## Итоговый файл compose.yml
 
 ```sh
-version: "3.7"
 services:
   wg-easy:
     image: ghcr.io/wg-easy/wg-easy
@@ -331,7 +329,6 @@ nano compose.yml
 `Файл compose.yml`
 
 ```sh
-version: "3.7"
 services:
   beszel:
     image: henrygd/beszel:latest
@@ -361,7 +358,6 @@ services:
 `Итоговый файл compose.yml`
 
 ```sh
-version: "3.7"
 services:
   beszel:
     image: henrygd/beszel:latest
