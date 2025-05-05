@@ -408,7 +408,11 @@ And click the `Add System` button. The agent is added to the server and starts r
 
 On the home page, click on the gear (Settings) on the panel and go to the Notifications tab. Here you can set up email notifications or add Webhook notifications. Beszel uses Shoutrrrr to integrate with popular notification services. [Shoutrrrr documentation on adding Telegram](https://containrrr.dev/shoutrrr/v0.8/services/telegram/). Integrations with other services are also available.
 
-Here's the string, `telegram://token@telegram/?channel-1[,chat-id-1,...]&notification=no&preview=false&parseMode=html`
+Here's the string, 
+
+```sh
+telegram://token@telegram/?channel-1[,chat-id-1,...]&notification=no&preview=false&parseMode=html
+```
 
 which we should add to the Beszel service, but first let's add our data to it. 
 
@@ -435,7 +439,11 @@ With @BotFather, you can further customize the bot:
 - Add a profile picture with the /setuserpic command.
 - Customize bot commands with /setcommands.
 
-So we got the token, add it to the string, total: `telegram://123456789:ABCdefGhIJKlmNoPQRstuVWXyz@telegram/?channels=channel&notification=no&preview=false&parseMode=html`.
+So we got the token, add it to the string, total: 
+
+```sh
+telegram://123456789:ABCdefGhIJKlmNoPQRstuVWXyz@telegram/?channels=channel&notification=no&preview=false&parseMode=html
+```
 
 #### Add chat 
 
@@ -452,7 +460,11 @@ And answer the questions.
 - Get the chat ID, for example: `-1002321991729`
 - If there is 1 chat, we answer no (no), if there is more than one chat, we answer yes (yes), and perform all actions again.
 
-Add the received chat ID to the string, total: `telegram://123456789:ABCdefGhIJKlmNoPQRstuVWXyz@telegram/?channels=-1002321991729&notification=no&preview=false&parseMode=html`.
+Add the received chat ID to the string, total: 
+
+```sh
+telegram://123456789:ABCdefGhIJKlmNoPQRstuVWXyz@telegram/?channels=-1002321991729&notification=no&preview=false&parseMode=html
+```
 
 Edit the rest of the parameters as desired, and add the final string to Settings - Notifications - Webhook.
 
