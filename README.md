@@ -206,7 +206,7 @@ ip -br a
 ```sh
 sudo iptables -t nat -I POSTROUTING 1 -s 10.45.0.0/24 -o YOUR_INTERFACE -j MASQUERADE
 ```
-где, `10.8.0.0/24` - свой IP адрес из переменной окружения `- WG_DEFAULT_ADDRESS=10.8.0.x` и `eth0` имя своего интерфейса.
+где, `10.45.0.0/24` - свой IP адрес из переменной окружения `- WG_DEFAULT_ADDRESS=10.45.0.x` и `eth0` имя своего интерфейса.
 Пример:
 ```sh
 sudo iptables -t nat -I POSTROUTING 1 -s 10.45.0.0/24 -o enp0s3 -j MASQUERADE
