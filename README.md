@@ -414,7 +414,11 @@ docker ps -a | grep beszel
 
 На главной странице на панели нажимаем на шестеренку (Настройки) и переходим на вкладку Уведомления. Здесь можно настроить уведомления по электронной почте или добавить Webhook-уведомления. Beszel использует Shoutrrr для интеграции с популярными сервисами уведомлений. [Документация Shoutrrr по добавлению Telegram](https://containrrr.dev/shoutrrr/v0.8/services/telegram/). Также доступны интеграции с другими сервисами.
 
-Вот строка, `telegram://token@telegram/?channel-1[,chat-id-1,...]&notification=no&preview=false&parseMode=html`
+Вот строка: 
+
+```sh
+telegram://token@telegram/?channel-1[,chat-id-1,...]&notification=no&preview=false&parseMode=html
+```
 
 которую мы должны добавить в сервис Beszel, но сначала добавим в нее свои данные. 
 
@@ -441,7 +445,11 @@ docker ps -a | grep beszel
 - Добавить картинку профиля командой /setuserpic.
 - Настроить команды бота с помощью /setcommands.
 
-Итак получили токен, добавляем в строку, итог: `telegram://123456789:ABCdefGhIJKlmNoPQRstuVWXyz@telegram/?channels=channel&notification=no&preview=false&parseMode=html`
+Итак получили токен, добавляем в строку, итог: 
+
+```sh
+telegram://123456789:ABCdefGhIJKlmNoPQRstuVWXyz@telegram/?channels=channel&notification=no&preview=false&parseMode=html
+```
 
 #### Добавляем чат 
 
@@ -458,7 +466,11 @@ docker run --rm -it containrrr/shoutrrr generate telegram
 - Получаем ID чата, например: `-1002321991729`
 - Если 1 чат, то отвечаем - нет (no), если более одного то да (yes), и выполняем все действия снова.
 
-Добавляем полученный чат ID в строку, итог: `telegram://123456789:ABCdefGhIJKlmNoPQRstuVWXyz@telegram/?channels=-1002321991729&notification=no&preview=false&parseMode=html`
+Добавляем полученный чат ID в строку, итог: 
+
+```sh
+telegram://123456789:ABCdefGhIJKlmNoPQRstuVWXyz@telegram/?channels=-1002321991729&notification=no&preview=false&parseMode=html
+```
 
 Редактируем остальные параметры по желанию, и итоговую строку добавляем в Настройки - Уведомления - Webhook.
 
