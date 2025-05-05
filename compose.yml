@@ -1,4 +1,3 @@
-version: "3.7"
 services:
   wg-easy:
     image: ghcr.io/wg-easy/wg-easy
