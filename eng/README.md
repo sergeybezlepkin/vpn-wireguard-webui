@@ -204,7 +204,7 @@ Get:
 
 Now add commands to the terminal: 
 ```sh
-sudo iptables -t nat -I POSTROUTING 1 -s 10.8.0.0.0/24 -o YOUR_INTERFACE -j MASQUERADE
+sudo iptables -t nat -I POSTROUTING 1 -s 10.45.0.0.0/24 -o YOUR_INTERFACE -j MASQUERADE
 ```
 where, `10.8.0.0.0/24` is your IP address from the environment variable `- WG_DEFAULT_ADDRESS=10.8.0.x` and `eth0` is the name of your interface.
 Example:
