@@ -132,7 +132,7 @@ We get: `- WG_HOST=178.125.85.124`.
 ## (Optional) Edit variables in the compose.yml file
 
 - In the `LANG=ru` environment variable you can change the interface language. Available options: en, ua, ru, tr, no, pl, fr, de, ca, es, ko, vi, nl, is, pt, chs, cht, it, th, hi, ja, si.
-- In the `PORT=48999` environment variable, you can specify a convenient port. For example, select a free port from the ranges 48658-48999 or 49001-49150.
+- In the `PORT=48999` and `WG_PORT` environment variable, you can specify a convenient port. For example, select a free port from the ranges 48658-48999 or 49001-49150.
 - In the `WG_DEFAULT_ADDRESS=10.45.0.x` environment variable, you can change the second octet of the address to 8 or 6. For example, you would get 10.8.0.x or 10.6.0.x.
 - After making the necessary changes, save the compose.yml file.
 
@@ -179,7 +179,7 @@ volumes:
 ## Add rules to the iptables firewall and enable IP Forward.
 
 ```sh
-cat net.ipv4.ip_forward = 1 >> /etc/sysctl.conf
+echo net.ipv4.ip_forward = 1 >> /etc/sysctl.conf
 ```
 ```sh
 sudo sysctl -p
