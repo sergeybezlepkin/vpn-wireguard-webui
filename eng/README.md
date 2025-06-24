@@ -2,9 +2,8 @@
 
 ![LOGO2](../img/2.png)
 
-[WireGuard - can be found here ](https://goo.su/xKp8kj)
+[WireGuard](https://goo.su/xKp8kj)
 
-You need a VPS/VDS server to run it. Server can be found [here](https://goo.su/IsDeUO), or [here - for less than 3$ per month, or for a week - for less than 1$](https://vdska.ru/#vds_calc). The operating system is Ubuntu 20 or newer. To run a VPN server in a container you only need 1 core, 1 gigabyte of RAM and from 15 gigabytes of free space. After purchasing the server, you will be given credentials to log in to the server.
 # Table of Contents
 
   - [Install git, curl, nano, and Docker](#install-git-curl-nano-and-docker)
