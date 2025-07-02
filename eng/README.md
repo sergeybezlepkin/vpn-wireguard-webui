@@ -29,7 +29,7 @@ sudo apt install -y git
 ```
 Clone the repository
 ```sh
-git clone https://gitea.com/sergeybezlepkin/vpn-wireguard.git
+git clone https://github.com/sergeybezlepkin/vpn-wireguard-webui.git
 ```
 Go to the vpn-wireguard directory.
 ```sh
