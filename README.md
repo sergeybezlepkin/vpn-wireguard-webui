@@ -31,7 +31,7 @@ sudo apt install -y git
 ```
 Клонируем репозиторий
 ```sh
-git clone https://gitea.com/sergeybezlepkin/vpn-wireguard.git
+git clone https://github.com/sergeybezlepkin/vpn-wireguard-webui.git
 ```
 Переходим в каталог vpn-wireguard
 ```sh
